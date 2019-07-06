@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <style>
+            .card{
+                display: inline-block;
+            }
+            body{
+              background-image: url("123.png")
+            }
+           </style>
+        <script>
+        know ={"hello" : "Hi my dear friend let be best friends ",   
+        "how are you and your friend"  : "Greater than AI",
+"what is 1+1": "My dear friend the answer is 2.0",
+"How much is 1 dollar in india":"The answer is 68.85 ruppes ",
+"Who are you" : "I am your  best AI assistant ",
+"What is QWERTY keyboard":"QWERTY is a keyboard design for Latin-script alphabets. The name comes from the order of the first six keys on the top left letter row of the keyboard. The QWERTY design is based on a layout created for the Sholes and Glidden typewriter and sold to E. Remington and Sons in 1873. ",
+"What is the best electronic company":"The answer is Apple",};
+function talk() {
+var user = document.getElementById("userBox").value;
+document.getElementById("userBox").value= "";
+document.getElementById("chatLog").innerHTML+= user+"<br>";
+if (user in know ) {
+    document.getElementById("chatLog").innerHTML+= know[user]+"<br>";
+}else{
+document.getElementById("chatLog").innerHTML +="I do not understand why not you ask me Who are you ...<br>";
+}
+
+}
+
+        </script>
+    </head>
+    <body >
+        <center>
+            <font color="white">
+        <p id="chatLog" >--CHAT TIME --<br></p>
+        <input id="userBox" type="text" onkeydown="if (event.keyCode == 13) { talk ()}">
+        </font>
+        </center>
+    </body>
+</html>
